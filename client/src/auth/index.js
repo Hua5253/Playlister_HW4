@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom'
 import api from './auth-request-api'
 
 const AuthContext = createContext();
-console.log("create AuthContext: " + AuthContext);
+// console.log("create AuthContext: " + AuthContext);
 
 // THESE ARE ALL THE TYPES OF UPDATES TO OUR AUTH STATE THAT CAN BE PROCESSED
 export const AuthActionType = {
@@ -22,7 +22,7 @@ function AuthContextProvider(props) {
 
     useEffect(() => {
         auth.getLoggedIn();
-    }, []);
+    });
 
     const authReducer = (action) => {
         const { type, payload } = action;
@@ -78,12 +78,13 @@ function AuthContextProvider(props) {
                     user: response.data.user
                 }
             })
-            history.push("/login");
+            history.push("/");
         }
     }
 
     auth.loginUser = async function(email, password) {
         const response = await api.loginUser(email, password);
+        console.log(response);
         if (response.status === 200) {
             authReducer({
                 type: AuthActionType.LOGIN_USER,
@@ -112,7 +113,7 @@ function AuthContextProvider(props) {
             initials += auth.user.firstName.charAt(0);
             initials += auth.user.lastName.charAt(0);
         }
-        console.log("user initials: " + initials);
+        // console.log("user initials: " + initials);
         return initials;
     }
 
