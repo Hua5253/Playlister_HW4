@@ -1,7 +1,6 @@
 import Alert from "@mui/material/Alert";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import { useState } from "react";
 import { useContext } from "react";
 import AuthContext from "../auth";
 
@@ -19,7 +18,6 @@ const style = {
 
 export default function MUIAlertModal() {
   const { auth } = useContext(AuthContext);
-  // let [state, setState] = useState(true);
 
   if (!auth.error) return null;
   let open = auth.error.is_error;
