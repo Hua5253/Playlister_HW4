@@ -36,7 +36,7 @@ export default function MUIDeleteModal() {
             <Box sx={style}>
                 <div className="modal-dialog">
                 <header className="dialog-header">
-                    Delete the {name} from the playlist?
+                    Delete the {name} the playlist?
                 </header>
                 <div id="confirm-cancel-container">
                     <button
