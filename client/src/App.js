@@ -9,10 +9,8 @@ import {
     LoginScreen,
     MUIRemoveSongModal,
     RegisterScreen,
-    Statusbar,
     WorkspaceScreen
 } from './components'
-import MUIAlertModal from './components/MUIAlertModal';
 /*
     This is our application's top-level component.
     
@@ -36,7 +34,6 @@ const App = () => {
                         <Route path="/register/" exact component={RegisterScreen} />
                         <Route path="/playlist/:id" exact component={WorkspaceScreen} />
                     </Switch>
-                    <MUIAlertModal />
                     <MUIRemoveSongModal />
                 </GlobalStoreContextProvider>
             </AuthContextProvider>
