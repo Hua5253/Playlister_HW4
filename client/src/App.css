@@ -74,8 +74,8 @@ body {
   float: right;
 }
 
-.top5-button,
-.top5-button-disabled {
+.playlister-button,
+.playlister-button-disabled {
   font-size: 36pt;
   border-width: 0px;
   float: left;
@@ -84,12 +84,12 @@ body {
   opacity: 100%;
 }
 
-.top5-button:hover {
+.playlister-button:hover {
   cursor: pointer;
   color: black;
 }
 
-.top5-button-disabled {
+.playlister-button-disabled {
   opacity: 0.25;
   cursor: not-allowed;
 }

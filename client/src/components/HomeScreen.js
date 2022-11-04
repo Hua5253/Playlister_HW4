@@ -38,6 +38,18 @@ const HomeScreen = () => {
             }
             </List>;
     }
+
+    // fool proof design ->
+    let isListModalOpen = store.isDeleteListModalOpen();
+    let editStatus = false;
+    if (store.listNameActive) {
+        editStatus = true;
+    }
+  
+    let addListClass = 'playlister-button';
+    if (isListModalOpen || editStatus)
+        addListClass += "-disabled";
+
     return (
         <div id="playlist-selector">
             <div id="list-selector-heading">
@@ -46,6 +58,7 @@ const HomeScreen = () => {
                 aria-label="add"
                 id="add-list-button"
                 onClick={handleCreateNewList}
+                className={addListClass}
             >
                 <AddIcon />
             </Fab>
