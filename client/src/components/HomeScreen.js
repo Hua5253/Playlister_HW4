@@ -17,6 +17,7 @@ const HomeScreen = () => {
 
     useEffect(() => {
         store.loadIdNamePairs();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[]);
 
     function handleCreateNewList() {
