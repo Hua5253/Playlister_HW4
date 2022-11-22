@@ -5,9 +5,7 @@ import MUIDeleteModal from "./MUIDeleteModal";
 import List from "@mui/material/List";
 import AppBanner from "./AppBanner";
 import AppFooter from "./AppFooter";
-/*
-    This React component lists all the top5 lists in the UI.
-    
+/*  
     @author McKilla Gorilla
 */
 const HomeScreen = () => {
