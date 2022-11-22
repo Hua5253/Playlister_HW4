@@ -101,9 +101,9 @@ export default function AppBanner() {
                         component="div"
                         sx={{ display: { xs: 'none', sm: 'block' } }}                        
                     >
-                        <Link style={{ textDecoration: 'none', color: 'white' }} to='/'>⌂</Link>
+                        playlister
                     </Typography>
-                    <Box sx={{ flexGrow: 1 }}>{editToolbar}</Box>
+                    <Box sx={{ flexGrow: 1 }}>{menu}</Box>
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                         <IconButton
                             size="large"
@@ -117,11 +117,9 @@ export default function AppBanner() {
                             { getAccountMenu(auth.loggedIn) }
                         </IconButton>
                     </Box>
+                    
                 </Toolbar>
             </AppBar>
-            {
-                menu
-            }
         </Box>
     );
 }

@@ -344,7 +344,7 @@ function GlobalStoreContextProvider(props) {
       console.log(response);
       if (response.data.success) {
         store.loadIdNamePairs();
-        history.push("/");
+        history.push("/home");
       }
     }
     processDelete(id);

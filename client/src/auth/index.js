@@ -115,7 +115,7 @@ function AuthContextProvider(props) {
             user: response.data.user,
           },
         });
-        history.push("/");
+        history.push("/home");
       }
     } catch (error) {
       let errorMessage = error.response.data.errorMessage;
@@ -139,7 +139,7 @@ function AuthContextProvider(props) {
             user: response.data.user,
           },
         });
-        history.push("/");
+        history.push("/home");
       }
     } catch (error) {
       let errorMessage = error.response.data.errorMessage;

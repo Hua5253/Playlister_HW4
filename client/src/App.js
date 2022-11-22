@@ -11,6 +11,8 @@ import {
     WorkspaceScreen
 } from './components'
 import MUIAlertModal from './components/MUIAlertModal';
+import HomeScreen from './components/HomeScreen';
+import SplashScreen from './components/SplashScreen';
 /*
     This is our application's top-level component.
     
@@ -27,9 +29,10 @@ const App = () => {
         <BrowserRouter>
             <AuthContextProvider>
                 <GlobalStoreContextProvider>              
-                    <AppBanner />
+                    {/* <AppBanner /> */}
                     <Switch>
-                        <Route path="/" exact component={HomeWrapper} />
+                        <Route path="/" exact component={SplashScreen} />
+                        <Route path="/home" exact component={HomeScreen} />
                         <Route path="/login/" exact component={LoginScreen} />
                         <Route path="/register/" exact component={RegisterScreen} />
                         <Route path="/playlist/:id" exact component={WorkspaceScreen} />
